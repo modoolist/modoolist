@@ -31,7 +31,7 @@
     color: #7B7B7B;
   }
 
-  input[type=text] {
+  input[type=text], input[type=password] {
     font-size: 2vh;
     font-weight: 400;
     padding: 1vh 5vw;
