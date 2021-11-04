@@ -3,17 +3,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "vite --host",
+    "start": "vite --host",
     "build": "vite build",
     "serve": "vite preview"
   },
-  "devDependencies": {
+  "dependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.0-next.11",
     "svelte": "^3.37.0",
-    "vite": "^2.6.4"
-  },
-  "dependencies": {
+    "vite": "^2.6.4",
     "svelte-routing": "^1.6.0"
   }
 }
