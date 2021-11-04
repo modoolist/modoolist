@@ -6,7 +6,7 @@
 <main>
   <img src="/images/logo.png" alt="Modoo-list">
   <input type="text" placeholder="아이디" id="username">
-  <input type="text" placeholder="비밀번호" id="password">
+  <input type="password" placeholder="비밀번호" id="password">
   <button>로그인</button>
   <span>모두리스트 계정이 없으신가요?</span>
   <a href="/auth/join">회원가입</a>
@@ -33,7 +33,7 @@
 
   input[type=text] {
     font-size: 2vh;
-    font-weight: 700;
+    font-weight: 400;
     padding: 1vh 5vw;
     width: 70vw;
     height: 4vh;
