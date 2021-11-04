@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --host",
+    "start": "npm run dev",
     "dev": "vite --host",
     "build": "vite build",
     "serve": "vite preview"
