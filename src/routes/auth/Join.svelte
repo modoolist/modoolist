@@ -1,6 +1,9 @@
 <script>
   import { navigate, Link } from "svelte-routing";
-  if(localStorage.getItem("token")) navigate("/todo", { replace: true });
+  import { onMount } from 'svelte';
+  onMount(() => {
+    if(localStorage.getItem("token")) navigate("/todo", { replace: true });
+  });
   let screenNumber = 1;
   const next = () => {
     if(screenNumber > -1) screenNumber--;

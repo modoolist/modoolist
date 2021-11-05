@@ -1,6 +1,9 @@
 <script>
   import { navigate, Link } from "svelte-routing";
-  if(localStorage.getItem("token")) navigate("/todo", { replace: true });
+  import { onMount } from 'svelte';
+  onMount(() => {
+    if(localStorage.getItem("token")) navigate("/todo", { replace: true });
+  });
   const login = () => {
     navigate("/todo", { replace: true });
   }
