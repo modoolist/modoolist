@@ -7,7 +7,7 @@
   let screenNumber = 1;
   const next = () => {
     if(screenNumber > -1) screenNumber--;
-    else navigate("/todo", { replace: true });
+    else navigate("/app/todo", { replace: true });
     document.getElementById("fieldContainer").style.marginLeft = `${screenNumber * 200}vw`;
     if(screenNumber == -1) {
       document.getElementsByTagName("button")[0].textContent = "시작하기";
@@ -16,7 +16,7 @@
 </script>
 
 <main>
-  <img src="/images/logo.png" alt="Modoo-list">
+  <img src="/resources/images/logo.png" alt="Modoo-list">
   <div id="fieldContainer">
     <div class="fieldInnerContainer">
       <span class="fieldExplanationText">사용하실 아이디를 정해주세요.</span>

@@ -3,7 +3,7 @@
   import Index from "./routes/Index.svelte";
   import Login from "./routes/auth/Login.svelte";
   import Join from "./routes/auth/Join.svelte";
-  import Todo from "./routes/todo/Index.svelte";
+  import Todo from "./routes/app/Todo.svelte";
   export let url = "";
 </script>
 
@@ -14,7 +14,7 @@
     <!-- /auth -->
     <Route path="/auth/login"><Login /></Route>
     <Route path="/auth/join"><Join /></Route>
-    <!-- /todo -->
-    <Route path="/todo"><Todo /></Route>
+    <!-- /app -->
+    <Route path="/app/todo"><Todo /></Route>
   </div>
 </Router>

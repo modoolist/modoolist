@@ -2,15 +2,15 @@
   import { navigate, Link } from "svelte-routing";
   import { onMount } from 'svelte';
   onMount(() => {
-    if(localStorage.getItem("token")) navigate("/todo", { replace: true });
+    if(localStorage.getItem("token")) navigate("/app/todo", { replace: true });
   });
   const login = () => {
-    navigate("/todo", { replace: true });
+    navigate("/app/todo", { replace: true });
   }
 </script>
 
 <main>
-  <img src="/images/logo.png" alt="Modoo-list">
+  <img src="/resources/images/logo.png" alt="Modoo-list">
   <input type="text" placeholder="아이디" id="username">
   <input type="password" placeholder="비밀번호" id="password">
   <button on:click={login}>로그인</button>
