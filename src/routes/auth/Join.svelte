@@ -1,5 +1,5 @@
 <script>
-  import { navigate, link } from "svelte-routing";
+  import { navigate, Link } from "svelte-routing";
   if(localStorage.getItem("token")) navigate("/todo", { replace: true });
   let screenNumber = 1;
   const next = () => {
@@ -30,7 +30,7 @@
   </div>
   <button on:click={next}>다음</button>
   <span>모두리스트 계정이 이미 있으신가요?</span>
-  <a href="/auth/login" use:link replace>로그인</a>
+  <Link to="/auth/login"><span class="link">로그인</span></Link>
 </main>
 
 <style>
@@ -84,7 +84,7 @@
     color: #B4B4B4;
   }
 
-  a {
+  .link {
     font-size: 1.7vh;
     font-weight: 600;
     color: #555;

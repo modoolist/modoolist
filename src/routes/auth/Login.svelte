@@ -1,5 +1,5 @@
 <script>
-  import { navigate, link } from "svelte-routing";
+  import { navigate, Link } from "svelte-routing";
   if(localStorage.getItem("token")) navigate("/todo", { replace: true });
   const login = () => {
     navigate("/todo", { replace: true });
@@ -12,7 +12,7 @@
   <input type="password" placeholder="비밀번호" id="password">
   <button on:click={login}>로그인</button>
   <span>모두리스트 계정이 없으신가요?</span>
-  <a href="/auth/join" use:link replace>회원가입</a>
+  <Link to="/auth/join"><span class="link">회원가입</span></Link>
 </main>
 
 <style>
@@ -67,7 +67,7 @@
     color: #B4B4B4;
   }
 
-  a {
+  .link {
     font-size: 1.7vh;
     font-weight: 600;
     color: #555;
