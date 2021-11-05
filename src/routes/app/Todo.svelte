@@ -49,11 +49,13 @@ import { dataset_dev } from "svelte/internal";
         <div class="todoInnerContainer">
           {#if todo.checked}
             <input type="checkbox" id={`cb${todo.id}`} checked>
+            <label for={`cb${todo.id}`}></label>
+            <span class="todo completed">{todo.name}</span>
           {:else}
             <input type="checkbox" id={`cb${todo.id}`}>
+            <label for={`cb${todo.id}`}></label>
+            <span class="todo">{todo.name}</span>
           {/if}
-          <label for={`cb${todo.id}`}></label>
-          <span class="todo">{todo.name}</span>
         </div>
       {/each}
     {/each}
@@ -127,6 +129,15 @@ import { dataset_dev } from "svelte/internal";
   .todo {
     margin-left: 5px;
     color: #000;
+    font-weight: 400;
+    font-size: 2.3vh;
+    margin-bottom: 0.5vh;
+  }
+
+  .todo.completed {
+    text-decoration: line-through;
+    margin-left: 5px;
+    color: #888;
     font-weight: 400;
     font-size: 2.3vh;
     margin-bottom: 0.5vh;
