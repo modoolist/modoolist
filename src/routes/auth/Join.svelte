@@ -33,7 +33,7 @@
   </div>
   <button on:click={next}>다음</button>
   <span>모두리스트 계정이 이미 있으신가요?</span>
-  <Link to="/auth/login"><span class="link">로그인</span></Link>
+  <Link to="/auth/login" replace={true}>로그인</Link>
 </main>
 
 <style>
@@ -87,10 +87,11 @@
     color: #B4B4B4;
   }
 
-  .link {
+  :global(a) {
     font-size: 1.7vh;
     font-weight: 600;
     color: #555;
+    text-decoration-color: #555;
   }
 
   .fieldInnerContainer {
