@@ -100,9 +100,9 @@
   }
 
   .fieldExplanationText {
-    font-size: 1.8vh;
+    font-size: 2.2vh;
     color: #222;
-    font-weight: 400;
+    font-weight: 500;
   }
 
   #fieldContainer {
