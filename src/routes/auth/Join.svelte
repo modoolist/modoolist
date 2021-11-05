@@ -4,7 +4,7 @@
   let screenNumber = 1;
   const next = () => {
     if(screenNumber > -1) screenNumber--;
-    else navigate("/todo");
+    else navigate("/todo", { replace: true });
     document.getElementById("fieldContainer").style.marginLeft = `${screenNumber * 200}vw`;
     if(screenNumber == -1) {
       document.getElementsByTagName("button")[0].textContent = "시작하기";
@@ -30,7 +30,7 @@
   </div>
   <button on:click={next}>다음</button>
   <span>모두리스트 계정이 이미 있으신가요?</span>
-  <a href="/auth/login" use:link>로그인</a>
+  <a href="/auth/login" use:link replace>로그인</a>
 </main>
 
 <style>
