@@ -27,6 +27,7 @@
   }
 
   input::placeholder {
+    font-weight: 600;
     font-size: 2vh;
     color: #7B7B7B;
   }
@@ -36,7 +37,7 @@
     font-weight: 400;
     padding: 1vh 5vw;
     width: 70vw;
-    height: 4vh;
+    height: calc(4vh - 4px);
     margin-top: 2vh;
     border-radius: 1vh;
     border: 2px solid #ddd;
@@ -56,10 +57,6 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
 
-  #username {
-    margin-top: 10vh;
-  }
-
   span {
     font-size: 1.7vh;
     font-weight: 400;
@@ -71,5 +68,9 @@
     font-size: 1.7vh;
     font-weight: 600;
     color: #555;
+  }
+
+  #username {
+    margin-top: 10vh;
   }
 </style>
