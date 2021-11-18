@@ -5,6 +5,7 @@
   import Join from "./routes/auth/Join.svelte";
   import Todo from "./routes/app/Todo.svelte";
   import Assessment from "./routes/app/Assessment.svelte";
+  import More from "./routes/app/More.svelte";
   export let url = "";
 </script>
 
@@ -18,5 +19,6 @@
     <!-- /app -->
     <Route path="/app/todo"><Todo /></Route>
     <Route path="/app/assessment"><Assessment /></Route>
+    <Route path="/app/more"><More /></Route>
   </div>
 </Router>
