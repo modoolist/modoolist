@@ -21,22 +21,7 @@ import { dataset_dev } from "svelte/internal";
   nowYear += (nowYear < 2000) ? 1900 : 0;
   var weekStartDate = new Date(nowYear, nowMonth, nowDay - nowDayOfWeek + 1);
   var weekEndDate = new Date(nowYear, nowMonth, nowDay + (7 - nowDayOfWeek));
-  // document.write(formatDate(weekStartDate) + " ~ " + formatDate(weekEndDate));
   const week = `${formatDate(weekStartDate)} ~ ${formatDate(weekEndDate)}`;
-  
-  // const date = new Date();
-  // const week = `${date.getMonth() + 1}월 ${date.getDate()}일 ~ `;
-  const exampleData = [
-    {
-      "target": "큰 목표",
-      "todo": [
-        {"id": 1, "name": "작은 목표1", "checked": false},
-        {"id": 2, "name": "작은 목표2", "checked": false},
-        {"id": 3, "name": "작은 목표3", "checked": true},
-        {"id": 4, "name": "작은 목표4", "checked": false},
-      ]
-    }
-  ];
 </script>
 
 <main>
@@ -165,7 +150,6 @@ import { dataset_dev } from "svelte/internal";
     border-radius: 3vh;
     margin-bottom: 2vh;
     background-color: #fff;
-    /* height: 61vh; */
     width: 74vw;
     box-shadow: 0 3px 10px rgba(0,0,0,0.02);
   }
