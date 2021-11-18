@@ -115,7 +115,7 @@ import { dataset_dev } from "svelte/internal";
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    padding: 1vh 5vw;
+    padding: 1vh 0vw;
   }
 
   .target {
