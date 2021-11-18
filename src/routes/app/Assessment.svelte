@@ -19,8 +19,8 @@ import { dataset_dev } from "svelte/internal";
   var nowMonth = now.getMonth();
   var nowYear = now.getYear();
   nowYear += (nowYear < 2000) ? 1900 : 0;
-  var weekStartDate = new Date(nowYear, nowMonth, nowDay - nowDayOfWeek);
-  var weekEndDate = new Date(nowYear, nowMonth, nowDay + (6 - nowDayOfWeek));
+  var weekStartDate = new Date(nowYear, nowMonth, nowDay - nowDayOfWeek + 1);
+  var weekEndDate = new Date(nowYear, nowMonth, nowDay + (7 - nowDayOfWeek));
   // document.write(formatDate(weekStartDate) + " ~ " + formatDate(weekEndDate));
   const week = `${formatDate(weekStartDate)} ~ ${formatDate(weekEndDate)}`;
   
