@@ -7,10 +7,12 @@
   import Assessment from "./routes/app/Assessment.svelte";
   import More from "./routes/app/More.svelte";
   export let url = "";
+  document.documentElement.style.setProperty('--div-height', `${window.innerHeight}px`);
+  document.documentElement.style.setProperty('--div-width', `${window.innerWidth}px`);
 </script>
 
 <Router url="{url}">
-  <div>
+  <div id="appContainer">
     <!-- / -->
     <Route path="/"><Index /></Route>
     <!-- /auth -->
@@ -22,3 +24,10 @@
     <Route path="/app/more"><More /></Route>
   </div>
 </Router>
+
+<style>
+  div {
+    height: calc(var(--div-height) - max(env(safe-area-inset-bottom), 3vh));
+    width: var(--div-width);
+  }
+</style>

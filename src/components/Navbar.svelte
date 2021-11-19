@@ -74,6 +74,8 @@
   }
 
   #container {
+    position: fixed;
+    bottom: max(env(safe-area-inset-bottom), 3vh);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -81,7 +83,7 @@
     border-radius: 3vh;
     margin-top: 3vh;
     background-color: #fff;
-    height: 9vh;
+    height: 10vh;
     width: 90vw;
     box-shadow: 0 3px 10px rgba(0,0,0,0.04);
   }
