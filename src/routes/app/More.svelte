@@ -52,7 +52,7 @@ import { dataset_dev } from "svelte/internal";
 <style>
   main {
     width: 100vw;
-    height: 100vh;
+    height: calc(90% - max(env(safe-area-inset-bottom), 3vh));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,7 +89,7 @@ import { dataset_dev } from "svelte/internal";
 
   #dateContainer {
     width: 100vw;
-    height: 15vh;
+    height: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,7 +110,7 @@ import { dataset_dev } from "svelte/internal";
   }
 
   #scrollContainer {
-    height: 63vh;
+    height: 75%;
     overflow: auto;
     margin-top: 2vh;
   }
