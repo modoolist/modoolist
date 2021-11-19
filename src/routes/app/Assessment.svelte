@@ -40,7 +40,6 @@ import { dataset_dev } from "svelte/internal";
 
   <div id="scrollContainer">
     <div id="levelContainer">
-
     </div>
 
     <div id="rateContainer">
@@ -57,37 +56,31 @@ import { dataset_dev } from "svelte/internal";
         <span id="countText">4/5 개</span>
       </div>
       <progress value="4" max="5" id="todayRate"></progress>
-
       <div id="rateTextContainer">
         <span id="containerTitle">화요일</span>
         <span id="countText">4/5 개</span>
       </div>
       <progress value="4" max="5" id="todayRate"></progress>
-
       <div id="rateTextContainer">
         <span id="containerTitle">수요일</span>
         <span id="countText">4/5 개</span>
       </div>
       <progress value="4" max="5" id="todayRate"></progress>
-
       <div id="rateTextContainer">
         <span id="containerTitle">목요일</span>
         <span id="countText">4/5 개</span>
       </div>
       <progress value="4" max="5" id="todayRate"></progress>
-
       <div id="rateTextContainer">
         <span id="containerTitle">금요일</span>
         <span id="countText">4/5 개</span>
       </div>
       <progress value="4" max="5" id="todayRate"></progress>
-
       <div id="rateTextContainer">
         <span id="containerTitle">토요일</span>
         <span id="countText">4/5 개</span>
       </div>
       <progress value="4" max="5" id="todayRate"></progress>
-
       <div id="rateTextContainer">
         <span id="containerTitle">일요일</span>
         <span id="countText">4/5 개</span>
@@ -186,20 +179,6 @@ import { dataset_dev } from "svelte/internal";
     height: 63vh;
     overflow: auto;
     margin-top: 2vh;
-  }
-
-  #asdfContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 1vh 8vw;
-    border-radius: 3vh;
-    margin-bottom: 2vh;
-    background-color: #fff;
-    height: 30vh;
-    width: 74vw;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.02);
   }
 
   #rateContainer {
