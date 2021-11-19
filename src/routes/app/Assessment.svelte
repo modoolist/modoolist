@@ -32,7 +32,7 @@ import { dataset_dev } from "svelte/internal";
   <div id="buttonsContainer">
     <div id="buttonsContainerLeft">
       <button>
-        <img src="/resources/icons/calendar.svg" alt="ㅁ">
+        <img src="/resources/icons/calendar.svg" alt="□">
         <span>달력</span>
       </button>
     </div>
@@ -40,16 +40,59 @@ import { dataset_dev } from "svelte/internal";
 
   <div id="scrollContainer">
     <div id="levelContainer">
-      <span class="testText">asdf</span>
+
     </div>
-    <div id="asdfContainer">
-      <span class="testText">asdf</span>
+
+    <div id="rateContainer">
+      <div id="rateTextContainer">
+        <span id="containerTitle">오늘 달성률</span>
+        <span id="countText">4/5 개</span>
+      </div>
+      <progress value="4" max="5" id="todayRate"></progress>
     </div>
-    <div id="asdfContainer">
-      <span class="testText">asdf</span>
-    </div>
-    <div id="asdfContainer">
-      <span class="testText">asdf</span>
+
+    <div id="rateContainer">
+      <div id="rateTextContainer">
+        <span id="containerTitle">월요일</span>
+        <span id="countText">4/5 개</span>
+      </div>
+      <progress value="4" max="5" id="todayRate"></progress>
+
+      <div id="rateTextContainer">
+        <span id="containerTitle">화요일</span>
+        <span id="countText">4/5 개</span>
+      </div>
+      <progress value="4" max="5" id="todayRate"></progress>
+
+      <div id="rateTextContainer">
+        <span id="containerTitle">수요일</span>
+        <span id="countText">4/5 개</span>
+      </div>
+      <progress value="4" max="5" id="todayRate"></progress>
+
+      <div id="rateTextContainer">
+        <span id="containerTitle">목요일</span>
+        <span id="countText">4/5 개</span>
+      </div>
+      <progress value="4" max="5" id="todayRate"></progress>
+
+      <div id="rateTextContainer">
+        <span id="containerTitle">금요일</span>
+        <span id="countText">4/5 개</span>
+      </div>
+      <progress value="4" max="5" id="todayRate"></progress>
+
+      <div id="rateTextContainer">
+        <span id="containerTitle">토요일</span>
+        <span id="countText">4/5 개</span>
+      </div>
+      <progress value="4" max="5" id="todayRate"></progress>
+
+      <div id="rateTextContainer">
+        <span id="containerTitle">일요일</span>
+        <span id="countText">4/5 개</span>
+      </div>
+      <progress value="4" max="5" id="todayRate"></progress>
     </div>
   </div>
 
@@ -76,6 +119,24 @@ import { dataset_dev } from "svelte/internal";
     box-shadow: 0 3px 10px rgba(0,0,0,0.04);
     height: 100%;
     padding: 1vh 3vw;
+  }
+
+  #todayRate {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    margin-top: 1.2vh;
+    margin-bottom: 2.5vh;
+  }
+
+  ::-webkit-progress-bar {
+    background-color: #BFD8FF;
+    border-radius: 10vh;
+  }
+
+  ::-webkit-progress-value {
+    background-color: #4b90ff;
+    border-radius: 5em;
   }
 
   button>span {
@@ -141,16 +202,49 @@ import { dataset_dev } from "svelte/internal";
     box-shadow: 0 3px 10px rgba(0,0,0,0.02);
   }
 
+  #rateContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.8vh 6vw;
+    padding-bottom: 0vh;
+    border-radius: 3vh;
+    margin-bottom: 2vh;
+    background-color: #fff;
+    width: 78vw;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+  }
+
   #levelContainer {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 1vh 8vw;
+    padding: 1.8vh 6vw;
+    padding-bottom: 0vh;
     border-radius: 3vh;
     margin-bottom: 2vh;
     background-color: #fff;
-    width: 74vw;
+    width: 78vw;
     box-shadow: 0 3px 10px rgba(0,0,0,0.02);
+  }
+
+  #containerTitle {
+    color: #222;
+    font-size: 2.2vh;
+  }
+
+  #countText {
+    color: #7B7B7B;
+    font-size: 2.2vh;
+    margin-left: auto;
+    text-align: right;
+  }
+
+  #rateTextContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 </style>
