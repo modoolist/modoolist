@@ -17,7 +17,7 @@ import { dataset_dev } from "svelte/internal";
   var nowDayOfWeek = now.getDay();
   var nowDay = now.getDate();
   var nowMonth = now.getMonth();
-  var nowYear = now.getYear();
+  var nowYear = now.getFullYear();
   nowYear += (nowYear < 2000) ? 1900 : 0;
   var weekStartDate = new Date(nowYear, nowMonth, nowDay - nowDayOfWeek + 1);
   var weekEndDate = new Date(nowYear, nowMonth, nowDay + (7 - nowDayOfWeek));
@@ -40,6 +40,9 @@ import { dataset_dev } from "svelte/internal";
 
   <div id="scrollContainer">
     <div id="levelContainer">
+      <div id="levelTextContainer">
+        <span>asdf</span>
+      </div>
     </div>
 
     <div id="rateContainer">
@@ -58,34 +61,34 @@ import { dataset_dev } from "svelte/internal";
       <progress value="4" max="5" id="todayRate"></progress>
       <div id="rateTextContainer">
         <span id="containerTitle">화요일</span>
-        <span id="countText">4/5 개</span>
+        <span id="countText">1/3 개</span>
       </div>
-      <progress value="4" max="5" id="todayRate"></progress>
+      <progress value="1" max="3" id="todayRate"></progress>
       <div id="rateTextContainer">
         <span id="containerTitle">수요일</span>
-        <span id="countText">4/5 개</span>
+        <span id="countText">0/0 개</span>
       </div>
-      <progress value="4" max="5" id="todayRate"></progress>
+      <progress value="0" max="0" id="todayRate"></progress>
       <div id="rateTextContainer">
         <span id="containerTitle">목요일</span>
-        <span id="countText">4/5 개</span>
+        <span id="countText">0/0 개</span>
       </div>
-      <progress value="4" max="5" id="todayRate"></progress>
+      <progress value="0" max="0" id="todayRate"></progress>
       <div id="rateTextContainer">
         <span id="containerTitle">금요일</span>
-        <span id="countText">4/5 개</span>
+        <span id="countText">0/0 개</span>
       </div>
-      <progress value="4" max="5" id="todayRate"></progress>
+      <progress value="0" max="0" id="todayRate"></progress>
       <div id="rateTextContainer">
         <span id="containerTitle">토요일</span>
-        <span id="countText">4/5 개</span>
+        <span id="countText">0/0 개</span>
       </div>
-      <progress value="4" max="5" id="todayRate"></progress>
+      <progress value="0" max="0" id="todayRate"></progress>
       <div id="rateTextContainer">
         <span id="containerTitle">일요일</span>
-        <span id="countText">4/5 개</span>
+        <span id="countText">0/0 개</span>
       </div>
-      <progress value="4" max="5" id="todayRate"></progress>
+      <progress value="0" max="0" id="todayRate"></progress>
     </div>
   </div>
 
