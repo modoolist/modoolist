@@ -52,6 +52,6 @@ jobs:
           proxy_password: ${{ secrets.SSH_PROXY_PASSWORD }}
           proxy_port: ${{ secrets.SSH_PROXY_PORT }}
           script: |
-            docker-compose -f /etc/modoolist-front-compose.yml up
+            docker-compose -f /etc/modoolist-front-compose.yml up -d
             docker cp modoolist-vite:/app/dist/ /modoolist-front
             docker stop modoolist-vite
