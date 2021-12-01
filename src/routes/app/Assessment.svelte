@@ -41,7 +41,17 @@ import { dataset_dev } from "svelte/internal";
   <div id="scrollContainer">
     <div id="levelContainer">
       <div id="levelTextContainer">
-        <span>asdf</span>
+        <div class="circular">
+          <div class="inner"></div>
+          <div class="circle">
+            <div class="bar left">
+              <div class="progress"></div>
+            </div>
+            <div class="bar right">
+              <div class="progress"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -61,9 +71,9 @@ import { dataset_dev } from "svelte/internal";
       <progress value="4" max="5" id="todayRate"></progress>
       <div id="rateTextContainer">
         <span id="containerTitle">화요일</span>
-        <span id="countText">1/3 개</span>
+        <span id="countText">0/0 개</span>
       </div>
-      <progress value="1" max="3" id="todayRate"></progress>
+      <progress value="0" max="0" id="todayRate"></progress>
       <div id="rateTextContainer">
         <span id="containerTitle">수요일</span>
         <span id="countText">0/0 개</span>
@@ -228,5 +238,23 @@ import { dataset_dev } from "svelte/internal";
     display: flex;
     width: 100%;
     justify-content: space-between;
+  }
+
+  .circular {
+    height: 100px;
+    width: 100px;
+    background: red;
+  }
+  .circular .inner {
+    position: absolute;
+    z-index: 6;
+    top: 50%;
+    left: 50%;
+    height: 80px;
+    width: 80px;
+    margin: -40px 0 0 -40px;
+    background: #dde6f0;
+    border-radius: 100%;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.2);
   }
 </style>
