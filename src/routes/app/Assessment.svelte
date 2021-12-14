@@ -39,7 +39,7 @@ import { dataset_dev } from "svelte/internal";
   </div>
 
   <div id="scrollContainer">
-    <div id="levelContainer">
+    <!-- <div id="levelContainer">
       <div id="levelTextContainer">
         <div class="circular">
           <div class="inner"></div>
@@ -53,7 +53,7 @@ import { dataset_dev } from "svelte/internal";
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <div id="rateContainer">
       <div id="rateTextContainer">
